@@ -16,7 +16,7 @@
 // l) Dezembro (12): Primavera
 
 let mes:number = Number(prompt("Indique um número entre 1 a 12, correspondendo a um mes do ano: "))
-let estacaos:string
+let estacao:string
 
 if(mes===1||mes === 2||mes === 3){
     estacao = "Verão"

@@ -1,13 +1,1 @@
-{
-"name": "projeto2ano",
-"version": "1.0.0",
-"main": "index.js",
-"scripts": {
-"test": "echo \"Error: no test specified\" && exit 1",
-"start": "tsc && node ./dist/index.js"
-},
-"keywords": [],
-"author": "",
-"license": "ISC",
-"type ": "module"
-}
+{"name":"projeto2ano","version":"1.0.0","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","start":"tsc && node ./dist/index.js"},"keywords":[],"author":"","license":"ISC","type ":"module","description":"","repository":{"type":"git","url":"git+https://github.com/aliciasilvino-lab/Projeto2ds.git"},"bugs":{"url":"https://github.com/aliciasilvino-lab/Projeto2ds/issues"},"homepage":"https://github.com/aliciasilvino-lab/Projeto2ds#readme","devDependencies":{"typescript":"^7.0.2"}}

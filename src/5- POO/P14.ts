@@ -3,17 +3,12 @@
 // publicação e disponibilidade (boolean). O programa deve permitir cadastrar até 15 livros via teclado,
 // listar todos os disponíveis e registrar o empréstimo de um livro pesquisado pelo título.
 
-// 14. Arrays Repetição Encapsulamento
-// Uma biblioteca precisa catalogar seus livros. Crie uma classe Livro com título, autor, ano de
-// publicação e disponibilidade (boolean). O programa deve permitir cadastrar até 15 livros via teclado,
-// listar todos os disponíveis e registrar o empréstimo de um livro pesquisado pelo título.
-
-class livro {
+class livro{
     private _titulo:string;
     private _autor:string;
     private _anoPublicacao:number;
     private _disponibilidade:boolean;
-    constructor(titulo: string, autor: string, anoPublicacao: number) {
+    constructor(titulo:string,autor:string,anoPublicacao:number){
         this._titulo = titulo;
         this._autor = autor;
         this._anoPublicacao = anoPublicacao;
@@ -31,16 +26,14 @@ class livro {
     public get disponibilidade(){
         return this._disponibilidade;
     }
-    public emprestar() {
-        if (this._disponibilidade) {
+    public emprestar(){
+        if (this._disponibilidade){
             this._disponibilidade = false;
             return true;
         }
-
         return false;
     }
-
-    public mostrarLivro() {
+    public mostrarLivro(){
         console.log("Título: " + this._titulo);
         console.log("Autor: " + this._autor);
         console.log("Ano de publicação: " + this._anoPublicacao);
@@ -48,63 +41,39 @@ class livro {
         console.log("-------------------------");
     }
 }
-
-
-// Array para guardar os livros
 let livros: livro[] = [];
-
-
-// Cadastro de até 15 livros
 for (let i = 0; i < 15; i++) {
-
     let titulo = prompt("Digite o título do livro:");
-
     let autor = prompt("Digite o autor do livro:");
-
     let ano = Number(prompt("Digite o ano de publicação:"));
-
-    let novoLivro = new livro(titulo, autor, ano);
-
+    let novoLivro = new livro(titulo,autor,ano);
     livros.push(novoLivro);
 
     let continuar = prompt("Deseja cadastrar outro livro? (s/n)");
-
     if (continuar?.toLowerCase() != "s") {
         break;
     }
 }
-
-
-// Listando os livros disponíveis
 console.log("LIVROS DISPONÍVEIS:");
-
-for (let i = 0; i < livros.length; i++) {
-
-    if (livros[i].disponibilidade) {
+for (let i = 0; i < livros.length; i++){
+    if (livros[i].disponibilidade){
         livros[i].mostrarLivro();
     }
 }
-
-
-// Pesquisando um livro para empréstimo
 let tituloPesquisa = prompt("Digite o título do livro que deseja emprestar:");
-
 let encontrado = false;
 
-for (let i = 0; i < livros.length; i++) {
-
-    if (livros[i].titulo.toLowerCase() == tituloPesquisa?.toLowerCase()) {
-
+for (let i = 0; i < livros.length; i++){
+    if (livros[i].titulo.toLowerCase() == tituloPesquisa?.toLowerCase()){
         encontrado = true;
-
-        if (livros[i].emprestar()) {
+        if(livros[i].emprestar()){
             console.log("Livro emprestado com sucesso!");
-        } else {
+        }else{
             console.log("Esse livro já está emprestado.");
         }
         break;
     }
 }
-if (!encontrado) {
+if(!encontrado){
     console.log("Livro não encontrado.");
 }

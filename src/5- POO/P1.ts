@@ -1,8 +1,11 @@
+// 1. Classe Bola: Crie uma classe que modele uma bola:
+//  Atributos: Cor, circunferência, material
+//  Métodos: trocaCor e mostraCor
+
 class Bola{
     cor:string;
     circunferencia:number;
     material:string;
-
     constructor(cor:string,circunferencia:number,material:string){
         this.cor = cor;
         this.circunferencia = circunferencia;

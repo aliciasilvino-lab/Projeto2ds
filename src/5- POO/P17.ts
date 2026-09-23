@@ -62,7 +62,7 @@ export function questao17poo():void{
 
     let alunos=0
     let servidores=0
-    let resultado="PESSOAS QUE ALMOCARAM:\n"
+    let resultado="pessoas que almoçaram: "
 
     for(let i=0;i<historico.length;i++){
         resultado+=historico[i].identificar()+"\n"

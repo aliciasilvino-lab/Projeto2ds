@@ -9,7 +9,7 @@
 // No entanto, o IFS possui três categorias distintas de funcionários, que herdam as características da
 // classe base, mas possuem regras próprias para o cálculo da remuneração final. A primeira categoria é
 // a de Professor, que possui como atributo privado o seu regime de trabalho (por exemplo, &quot;DE&quot; para
-// Dedicação Exclusiva); caso o regime seja &quot;DE&quot;, o professor recebe um acréscimo de 20% sobre o seu
+// Dedicação Exclusiva); caso o regime seja, o professor recebe um acréscimo de 20% sobre o seu
 // salário base no momento do cálculo salarial. A segunda categoria é a de Técnico Administrativo, que
 // possui um atributo privado para armazenar o valor fixo de um auxílio-alimentação de R$ 1.000,00,
 // valor este que deve ser somado ao seu salário base no cálculo final. A terceira categoria é a de Diretor,
@@ -27,5 +27,15 @@
 // geral que a instituição terá com a folha de pagamento daquele mês.
 
 export function questao18poo():void{
-    
+    class colaboradores{
+        private _nome:string
+        private _matricula:number
+        private _salarioBase:number
+        constructor(nome:string,matricula:number,salarioBase:number){
+           this._nome=nome
+           this._matricula=matricula
+           this._salarioBase=salarioBase
+        }
+        
+    }
 }

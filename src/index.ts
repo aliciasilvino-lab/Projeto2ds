@@ -46,3 +46,20 @@ document.getElementById("questao15")?.addEventListener("click", questao15poo);
 import { questao16poo } from "./5- POO/P16.js";  
 document.getElementById("questao16")?.addEventListener("click", questao16poo);
 
+import { questao17poo } from "./5- POO/P17.js";  
+document.getElementById("questao17")?.addEventListener("click", questao17poo);
+
+import { questao18poo } from "./5- POO/P18.js";  
+document.getElementById("questao18")?.addEventListener("click", questao18poo);
+
+import { questao19poo } from "./5- POO/P19.js";  
+document.getElementById("questao19")?.addEventListener("click", questao19poo);
+
+import { questao20poo } from "./5- POO/P20.js";  
+document.getElementById("questao20")?.addEventListener("click", questao20poo);
+
+import { questao21poo } from "./5- POO/P21.js";  
+document.getElementById("questao21")?.addEventListener("click", questao21poo);
+
+import { questao22poo } from "./5- POO/P22.js";  
+document.getElementById("questao22")?.addEventListener("click", questao22poo);

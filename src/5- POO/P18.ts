@@ -27,5 +27,5 @@
 // geral que a instituição terá com a folha de pagamento daquele mês.
 
 export function questao18poo():void{
-
+    
 }

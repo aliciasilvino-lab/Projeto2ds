@@ -35,16 +35,16 @@ export function questao5poo():void{
     let pessoa = new Pessoa("João",18,70,170);
     console.log("Nome: "+pessoa.nome);
     console.log("Idade: "+pessoa.idade);
-    console.log("Peso: "+pessoa.peso+" kg");
-    console.log("Altura: "+pessoa.altura+" cm");
+    console.log("Peso: "+pessoa.peso+"kg");
+    console.log("Altura: "+pessoa.altura+"cm");
     pessoa.envelhecer();
     console.log("Depois de envelhecer: ");
     console.log("Idade: "+pessoa.idade);
-    console.log("Altura: "+pessoa.altura+" cm");
+    console.log("Altura: "+pessoa.altura+"cm");
     pessoa.engordar(2);
-    console.log("Peso depois de engordar: "+pessoa.peso+" kg");
+    console.log("Peso depois de engordar: "+pessoa.peso+"kg");
     pessoa.emagrecer(1);
-    console.log("Peso depois de emagrecer: "+pessoa.peso+" kg");
+    console.log("Peso depois de emagrecer: "+pessoa.peso+"kg");
     pessoa.crescer(2);
-    console.log("Altura depois de crescer: "+pessoa.altura+" cm");
+    console.log("Altura depois de crescer: "+pessoa.altura+"cm");
 }

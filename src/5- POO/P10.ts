@@ -16,5 +16,37 @@
 
 
 export function questao10poo():void{
+    class bichinho{
+        nome:string
+        fome:number
+        saude:number
+        idade:number
+        constructor(nome:string,fome:number,saude:number,idade:number){
+            this.nome=nome
+            this.fome=fome
+            this.saude=saude
+            this.idade=idade
+        }
+        alterarNome(nome:string){this.nome=nome}
+        alterarFome(fome:number){this.fome=fome}
+        alterarSaude(saude:number){this.saude=saude}
+        alterarIdade(idade:number){this.idade=idade}
+        get humor(){
+            let media=(this.saude+(10-this.fome))/2
 
+            if(media>=8)return "muito feliz"
+            else if(media>=5)return "neutro / ok"
+            else return "triste / transtornado"
+        }
+    }
+    let nome=prompt("digite o nome: ")||""
+    let fome=Number(prompt("digite a fome: "))
+    let saude=Number(prompt("digite a saude: "))
+    let idade=Number(prompt("digite a idade: "))
+    let bichinho1=new bichinho(nome,fome,saude,idade)
+    alert("nome: "+bichinho1.nome+
+    "\nfome: "+bichinho1.fome+
+    "\nsaude: "+bichinho1.saude+
+    "\nidade: "+bichinho1.idade+
+    "\nhumor: "+bichinho1.humor)
 }

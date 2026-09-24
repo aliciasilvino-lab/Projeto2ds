@@ -13,7 +13,6 @@ export function questao15poo():void{
             return 0
         }
     }
-
     class funcionarioHorista extends funcionario{
         horas:number
         valorHora:number
@@ -26,7 +25,6 @@ export function questao15poo():void{
             return this.horas*this.valorHora
         }
     }
-
     class funcionarioAssalariado extends funcionario{
         salarioFixo:number
         constructor(nome:string,salarioFixo:number){
@@ -37,7 +35,6 @@ export function questao15poo():void{
             return this.salarioFixo
         }
     }
-
     let nome=prompt("digite o nome: ")||""
     let tipo=prompt("1 - horista\n2 - assalariado")
     if(tipo=="1"){

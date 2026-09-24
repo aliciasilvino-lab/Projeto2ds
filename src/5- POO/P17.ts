@@ -41,7 +41,6 @@ export function questao17poo():void{
     }
     let usuarios:usuario[]=[]
     let historico:usuario[]=[]
-
     while(true){
         let tipo=prompt("1 - aluno\n2 - servidor\n3 - encerrar")
         if(tipo=="3")break
@@ -55,19 +54,19 @@ export function questao17poo():void{
             usuarios.push(new servidor(id,nome,departamento))
         }
     }
-
     for(let i=0;i<usuarios.length;i++){
         historico.push(usuarios[i])
     }
-
     let alunos=0
     let servidores=0
     let resultado="pessoas que almoçaram: "
-
     for(let i=0;i<historico.length;i++){
         resultado+=historico[i].identificar()+"\n"
-        if(historico[i] instanceof aluno)alunos++
-        else servidores++
+        if(historico[i] instanceof aluno){
+            alunos++
+        }else{
+            servidores++
+        }
     }
     resultado+="\ntotal de alunos: "+alunos
     resultado+="\ntotal de servidores: "+servidores

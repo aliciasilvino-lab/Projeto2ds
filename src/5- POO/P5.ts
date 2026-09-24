@@ -32,7 +32,7 @@ export function questao5poo():void{
             this.altura=this.altura+altura;
         }
     }
-    let pessoa = new Pessoa("João",18,70,170);
+    let pessoa=new Pessoa("João",18,70,170);
     console.log("Nome: "+pessoa.nome);
     console.log("Idade: "+pessoa.idade);
     console.log("Peso: "+pessoa.peso+"kg");

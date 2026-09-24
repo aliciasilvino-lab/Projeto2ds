@@ -27,16 +27,25 @@ export function questao10poo():void{
             this.saude=saude
             this.idade=idade
         }
-        alterarNome(nome:string){this.nome=nome}
-        alterarFome(fome:number){this.fome=fome}
-        alterarSaude(saude:number){this.saude=saude}
-        alterarIdade(idade:number){this.idade=idade}
+        alterarNome(nome:string){
+            this.nome=nome}
+        alterarFome(fome:number){
+            this.fome=fome}
+        alterarSaude(saude:number){
+            this.saude=saude}
+        alterarIdade(idade:number){
+            this.idade=idade}
         get humor(){
             let media=(this.saude+(10-this.fome))/2
-
-            if(media>=8)return "muito feliz"
-            else if(media>=5)return "neutro / ok"
-            else return "triste / transtornado"
+            if(media>=8){
+                return "muito feliz"
+            }
+            else if(media>=5){
+                return "neutro / ok"
+            }
+            else{
+             return "triste / transtornado"
+            }
         }
     }
     let nome=prompt("digite o nome: ")||""

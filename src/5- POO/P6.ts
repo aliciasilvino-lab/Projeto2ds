@@ -14,11 +14,16 @@ export function questao6poo():void{
             this.nome=nome
             this.saldo=saldo
         }
-        alterarNome(novoNome:string){this.nome=novoNome}
-        deposito(valor:number){this.saldo+=valor}
+        alterarNome(novoNome:string){
+            this.nome=novoNome}
+        deposito(valor:number){
+            this.saldo+=valor}
         saque(valor:number){
-            if(valor<=this.saldo)this.saldo-=valor
-            else alert("saldo insuficiente")
+            if(valor<=this.saldo){
+                this.saldo-=valor
+            }else{
+                alert("saldo insuficiente")
+            }
         }
     }
     let numero=Number(prompt("digite o numero da conta: "));
@@ -26,10 +31,16 @@ export function questao6poo():void{
     let conta=new contaCorrente(numero,nome)
     while(true){
         let opcao=prompt("1 - alterar nome\n2 - deposito\n3 - saque\n4 - ver conta\n5 - sair")
-        if(opcao=="1")conta.alterarNome(prompt("digite o novo nome: ")||"")
-        else if(opcao=="2")conta.deposito(Number(prompt("digite o valor: ")))
-        else if(opcao=="3")conta.saque(Number(prompt("digite o valor: ")))
-        else if(opcao=="4")alert("nome: "+conta.nome+"| saldo: "+conta.saldo)
-        else if(opcao=="5")break
+        if(opcao=="1"){
+            conta.alterarNome(prompt("digite o novo nome: ")||"")
+        }else if(opcao=="2"){
+            conta.deposito(Number(prompt("digite o valor: ")))
+        }else if(opcao=="3"){
+            conta.saque(Number(prompt("digite o valor: ")))
+        }else if(opcao=="4"){
+            alert("nome: "+conta.nome+"| saldo: "+conta.saldo)
+        }else if(opcao=="5"){
+            break
+        }
     }
 }

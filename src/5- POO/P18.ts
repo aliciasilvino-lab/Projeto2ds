@@ -27,15 +27,95 @@
 // geral que a instituição terá com a folha de pagamento daquele mês.
 
 export function questao18poo():void{
-    class colaboradores{
-        private _nome:string
-        private _matricula:number
-        private _salarioBase:number
+    class Funcionario{
+        private nome:string;
+        private matricula:number;
+        private salarioBase:number;
         constructor(nome:string,matricula:number,salarioBase:number){
-           this._nome=nome
-           this._matricula=matricula
-           this._salarioBase=salarioBase
+            this.nome=nome;
+            this.matricula=matricula;
+            this.salarioBase=salarioBase;
         }
-        
+        getNome(){
+            return this.nome;}
+        setNome(nome:string){
+            this.nome=nome;}
+        getMatricula(){
+            return this.matricula;}
+        setMatricula(matricula:number){
+            this.matricula=matricula;}
+        getSalarioBase(){
+            return this.salarioBase;}
+        setSalarioBase(salario:number){
+            this.salarioBase=salario;}
+        calcularSalario():number{
+            return this.salarioBase;
+            }
     }
+    class Professor extends Funcionario{
+        private regime:string;
+        constructor(nome:string,matricula:number,salario:number,regime:string){
+            super(nome,matricula,salario);
+            this.regime=regime;
+        }
+        calcularSalario():number{
+        if(this.regime=="DE")
+            return this.getSalarioBase()*1.20;
+            return this.getSalarioBase();
+        }
+    }   
+    class TecnicoAdministrativo extends Funcionario{
+        private auxilio:number=1000;  
+        calcularSalario():number{
+            return this.getSalarioBase()+this.auxilio;
+        }
+    }
+    class Diretor extends Funcionario{
+        private departamento:string;
+        private gratificacao:number;
+        constructor(nome:string,matricula:number,salario:number,departamento:string,gratificacao:number){
+            super(nome,matricula,salario);
+            this.departamento=departamento;
+            this.gratificacao=gratificacao;
+        }
+        calcularSalario():number{
+            return this.getSalarioBase()+this.gratificacao;
+        }
+    }
+        let professores=0;
+        let tecnicos=0;
+        let diretores=0;
+        while(true){
+            let tipo=prompt("1-Professor\n2-Técnico Administrativo\n3-Diretor\n0-Sair");
+            if(tipo=="0")break;
+            let nome=prompt("Nome:")!;
+            let matricula=Number(prompt("Matrícula:"));
+            let salario=Number(prompt("Salário base:"));
+            let funcionario:Funcionario;
+            if(tipo=="1"){
+                let regime=prompt("Regime de trabalho:")!;
+                funcionario=new Professor(nome,matricula,salario,regime);
+                professores+=funcionario.calcularSalario();
+            }
+            else if(tipo=="2"){
+                funcionario=new TecnicoAdministrativo(nome,matricula,salario);
+                tecnicos+=funcionario.calcularSalario();
+            }
+            else if(tipo=="3"){
+            let departamento=prompt("Departamento:")!;
+            let gratificacao=Number(prompt("Gratificação:"));
+            funcionario=new Diretor(nome,matricula,salario,departamento,gratificacao);
+            diretores+=funcionario.calcularSalario();
+            }
+            else{
+                alert("Opção inválida!");
+            }
+        }   
+    let total=professores+tecnicos+diretores;   
+    console.log("====RELATÓRIO FINAL====");
+    console.log("Professores: R$ "+professores.toFixed(2));
+    console.log("Técnicos Administrativos: R$ "+tecnicos.toFixed(2));
+    console.log("Diretores: R$ "+diretores.toFixed(2));
+    console.log("Total geral: R$ "+total.toFixed(2));
+        
 }

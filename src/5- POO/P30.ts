@@ -8,65 +8,70 @@
 // faturamento total do dia utilizando uma estrutura de redução ou soma acumulada.
 
 export function questao30poo():void{
-    class passageiro{
+    class passagem{
         private _nome:string
-        private _cpf:number
+        private _cpf:string
         private _valorBase:number
-        constructor(nome:string,cpf:number,valorBase:number){
+        constructor(nome:string,cpf:string,valorBase:number){
             this._nome=nome
             this._cpf=cpf
             this._valorBase=valorBase
         }
-        public get nome():string{
+        public get nome(){
             return this._nome
         }
-        public get cpf():number{
+        public get cpf(){
             return this._cpf
         }
-        public get valorBase():number{
+        public get valorBase(){
             return this._valorBase
         }
+        public calcularValor(){
+            return this._valorBase
+        }
+        public mostrarPassagem(){
+            console.log("nome: "+this._nome)
+            console.log("cpf: "+this._cpf)
+            console.log("valor: R$ "+this.calcularValor())
+            console.log("-------------------------")
+        }
     }
-    class passagemComum extends passageiro{
-        private _valorFinalC:number
-        constructor(nome:string,cpf:number,valorBase:number,valorFinalC:number){
+    class estudantil extends passagem{
+        constructor(nome:string,cpf:string,valorBase:number){
             super(nome,cpf,valorBase)
-            this._valorFinalC=valorFinalC
         }
-        public get valorFinalC():number{
-            return this.valorBase
+        public calcularValor(){
+            return this.valorBase*0.5
         }
-
-    }
-    class passagemEstudantil extends passageiro{
-        private _valorFinalE:number
-        constructor(nome:string,cpf:number,valorBase:number,valorFinalE:number){
-            super(nome,cpf,valorBase)
-            this._valorFinalE=valorFinalE
-        }
-        public get valorFinalE():number{
-            return this._valorFinalE*0.5
+        public mostrarPassagem(){
+            console.log("nome: "+this.nome)
+            console.log("cpf: "+this.cpf)
+            console.log("valor base: R$ "+this.valorBase)
+            console.log("valor com desconto: R$ "+this.calcularValor())
+            console.log("-------------------------")
         }
     }
-    let continuar="s"
-    let passagens:passageiro[]=[]
-    while(continuar==="s"){
-        let nome=String(prompt(`Nome: `));
-        let cpf=Number(prompt(`Cpf: `));
-        let valorBase=Number(prompt(`Valor Base: `))
-        let tipoPassagens=Number(prompt(`Passagem: \n1-Passagem Comum\n2-Passagem Estudantil `))
-        continuar=String(prompt(`Digite "s" para rodar ou "n" pra sair: `));
-        if(tipoPassagens===1) {
-            passagens.push(
-                new passagemComum(nome,cpf,valorBase,valorFinalC)
-            )
-        }else if(tipoPassagens===2){
-            passagens.push(
-                new passagemEstudantil(nome,cpf,valorBase,valorFinalE)
-            )
+    let passagens:passagem[]=[]
+    for(let i=0;i<15;i++){
+        let tipo=prompt("a passagem e comum ou estudantil? (c/e)")||""
+        let nome=prompt("digite o nome do passageiro: ")||""
+        let cpf=prompt("digite o CPF: ")||""
+        let valorBase=Number(prompt("digite o valor base da passagem: "))
+        if(tipo.toLowerCase()=="e"){
+            let novaPassagem=new estudantil(nome,cpf,valorBase)
+            passagens.push(novaPassagem)
         }else{
-            console.log("Tipo de passagem inválido!")
+            let novaPassagem=new passagem(nome,cpf,valorBase)
+            passagens.push(novaPassagem)
         }
+        let continuar=prompt("deseja cadastrar outra passagem? (s/n)")
+        if(continuar?.toLowerCase()!="s")break
     }
-    console.log("===== RELATÓRIO =====")
+    let faturamentoTotal=0
+    console.log("PASSAGENS VENDIDAS:")
+    for(let i=0;i<passagens.length;i++){
+        passagens[i].mostrarPassagem()
+        faturamentoTotal+=passagens[i].calcularValor()
+    }
+    console.log("FATURAMENTO TOTAL: R$ "+faturamentoTotal)
 }

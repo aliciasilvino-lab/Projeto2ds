@@ -58,92 +58,25 @@ document.getElementById("questao19")?.addEventListener("click", questao19poo);
 import { questao20poo } from "./5- POO/P20.js";  
 document.getElementById("questao20")?.addEventListener("click", questao20poo);
 
-import { questao21poo } from "./5- POO/P21.js";  
-document.getElementById("questao21")?.addEventListener("click", questao21poo);
-
-import { questao22poo } from "./5- POO/P22.js";  
-document.getElementById("questao22")?.addEventListener("click", questao22poo);
-
 import { questao23poo } from "./5- POO/P23.js";  
 document.getElementById("questao23")?.addEventListener("click", questao23poo);
-
-import { questao24poo } from "./5- POO/P24.js";  
-document.getElementById("questao24")?.addEventListener("click", questao24poo);
-
-import { questao25poo } from "./5- POO/P25.js";  
-document.getElementById("questao25")?.addEventListener("click", questao25poo);
-
-import { questao26poo } from "./5- POO/P26.js";  
-document.getElementById("questao26")?.addEventListener("click", questao26poo);
-
-import { questao27poo } from "./5- POO/P27.js";  
-document.getElementById("questao27")?.addEventListener("click", questao27poo);
-
-import { questao28poo } from "./5- POO/P28.js";  
-document.getElementById("questao28")?.addEventListener("click", questao28poo);
-
-import { questao29poo } from "./5- POO/P29.js";  
-document.getElementById("questao29")?.addEventListener("click", questao29poo);
 
 import { questao30poo } from "./5- POO/P30.js";  
 document.getElementById("questao30")?.addEventListener("click", questao30poo);
 
-import { questao31poo } from "./5- POO/P31.js";
-document.getElementById("questao31")?.addEventListener("click", questao31poo);
-
-import { questao32poo } from "./5- POO/P32.js";
-document.getElementById("questao32")?.addEventListener("click", questao32poo);
-
-import { questao33poo } from "./5- POO/P33.js";
-document.getElementById("questao33")?.addEventListener("click", questao33poo);
-
-import { questao34poo } from "./5- POO/P34.js";
-document.getElementById("questao34")?.addEventListener("click", questao34poo);
-
-import { questao35poo } from "./5- POO/P35.js";
-document.getElementById("questao35")?.addEventListener("click", questao35poo);
-
 import { questao36poo } from "./5- POO/P36.js";
 document.getElementById("questao36")?.addEventListener("click", questao36poo);
-
-import { questao37poo } from "./5- POO/P37.js";
-document.getElementById("questao37")?.addEventListener("click", questao37poo);
-
-import { questao38poo } from "./5- POO/P38.js";
-document.getElementById("questao38")?.addEventListener("click", questao38poo);
 
 import { questao39poo } from "./5- POO/P39.js";
 document.getElementById("questao39")?.addEventListener("click", questao39poo);
 
-import { questao40poo } from "./5- POO/P40.js";
-document.getElementById("questao40")?.addEventListener("click", questao40poo);
-
-import { questao41poo } from "./5- POO/P41.js";
-document.getElementById("questao41")?.addEventListener("click", questao41poo);
-
 import { questao42poo } from "./5- POO/P42.js";
 document.getElementById("questao42")?.addEventListener("click", questao42poo);
-
-import { questao43poo } from "./5- POO/P43.js";
-document.getElementById("questao43")?.addEventListener("click", questao43poo);
-
-import { questao44poo } from "./5- POO/P44.js";
-document.getElementById("questao44")?.addEventListener("click", questao44poo);
-
-import { questao45poo } from "./5- POO/P45.js";
-document.getElementById("questao45")?.addEventListener("click", questao45poo);
-
-import { questao46poo } from "./5- POO/P46.js";
-document.getElementById("questao46")?.addEventListener("click", questao46poo);
 
 import { questao47poo } from "./5- POO/P47.js";
 document.getElementById("questao47")?.addEventListener("click", questao47poo);
 
-import { questao48poo } from "./5- POO/P48.js";
-document.getElementById("questao48")?.addEventListener("click", questao48poo);
-
 import { questao49poo } from "./5- POO/P49.js";
 document.getElementById("questao49")?.addEventListener("click", questao49poo);
 
-import { questao50poo } from "./5- POO/P50.js";
-document.getElementById("questao50")?.addEventListener("click", questao50poo);
+
